@@ -2,7 +2,7 @@
 'use client';
 
 import { Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -16,7 +16,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
-import { useToast } from '@/hooks/use-toast';
 import {
   Form,
   FormControl,
@@ -37,9 +36,17 @@ const formSchema = z.object({
 
 const TAX_RATE = 0.055;
 
+function generateRefId() {
+  return (
+    Math.random().toString(36).substring(2, 8).toUpperCase() +
+    '&' +
+    Math.random().toString(36).substring(2, 4).toUpperCase()
+  );
+}
+
 function CheckoutPage() {
   const searchParams = useSearchParams();
-  const { toast } = useToast();
+  const router = useRouter();
 
   const experienceId = searchParams.get('experienceId');
   const date = searchParams.get('date');
@@ -69,11 +76,8 @@ function CheckoutPage() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    toast({
-      title: 'Payment Successful!',
-      description: `Your booking for ${experience?.title} is confirmed.`,
-    });
-    // Here you would typically handle payment processing
+    const refId = generateRefId();
+    router.push(`/checkout/success?refId=${refId}`);
   }
 
   return (
