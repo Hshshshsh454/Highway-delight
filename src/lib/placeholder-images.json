@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "udupi-kayak-1",
+      "description": "Kayaking during a vibrant sunset in Udupi.",
+      "imageUrl": "https://images.unsplash.com/photo-1750166952045-7ac22993fb35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxrYXlha2luZyUyMHN1bnNldHxlbnwwfHx8fDE3NjE2NDU0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kayaking sunset"
+    },
+    {
+      "id": "udupi-kayak-2",
+      "description": "Paddling through calm backwaters.",
+      "imageUrl": "https://images.unsplash.com/photo-1668950919914-7548e8ae7d97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwYWRkbGluZyUyMGNhbG0lMjB3YXRlcnxlbnwwfHx8fDE3NjE3MTc4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "paddling calm water"
+    },
+    {
+      "id": "udupi-kayak-3",
+      "description": "Group of friends kayaking together.",
+      "imageUrl": "https://images.unsplash.com/photo-1698276890015-cbf0bc900f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxncm91cCUyMGtheWFraW5nfGVufDB8fHx8MTc2MTcxNzgzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "group kayaking"
+    },
+    {
+      "id": "bangalore-tech-1",
+      "description": "Modern architecture of a Bangalore tech park.",
+      "imageUrl": "https://images.unsplash.com/photo-1531591022136-eb8b0da1e6d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc2MTYxNTI3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "bangalore-tech-2",
+      "description": "Busy street scene in Bangalore's tech corridor.",
+      "imageUrl": "https://images.unsplash.com/photo-1518729406574-12149251ac0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXR5JTIwc3RyZWV0fGVufDB8fHx8MTc2MTYwNDk5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city street"
+    },
+    {
+      "id": "coorg-coffee-1",
+      "description": "Lush green coffee plantation in Coorg.",
+      "imageUrl": "https://images.unsplash.com/photo-1652019815309-95821b00084c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2ZmZWUlMjBwbGFudGF0aW9ufGVufDB8fHx8MTc2MTY1MjczNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee plantation"
+    },
+    {
+      "id": "coorg-coffee-2",
+      "description": "Close-up of fresh coffee beans on a branch.",
+      "imageUrl": "https://images.unsplash.com/photo-1692296113053-76f240e5ce33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NjE3MDMyMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee beans"
+    },
+    {
+      "id": "manali-trek-1",
+      "description": "Snow-capped mountains during a trek in Manali.",
+      "imageUrl": "https://images.unsplash.com/photo-1512273222628-4daea6e55abb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzbm93JTIwbW91bnRhaW5zfGVufDB8fHx8MTc2MTY3ODM0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "snow mountains"
+    },
+    {
+      "id": "manali-trek-2",
+      "description": "A trekker looking at a mountain valley.",
+      "imageUrl": "https://images.unsplash.com/photo-1600639157266-474efe0f69d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmVra2VyJTIwdmFsbGV5fGVufDB8fHx8MTc2MTcxNzgzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "trekker valley"
+    },
+    {
+      "id": "sunderban-safari-1",
+      "description": "A boat navigating through the dense mangrove forests of Sunderban.",
+      "imageUrl": "https://images.unsplash.com/photo-1589556183130-530470785fab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW5ncm92ZSUyMGZvcmVzdHxlbnwwfHx8fDE3NjE2NzI5MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mangrove forest"
+    },
+    {
+      "id": "sunderban-safari-2",
+      "description": "A view of the Sundarban river ecosystem.",
+      "imageUrl": "https://images.unsplash.com/photo-1649347173558-a305d7b8ff98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyaXZlciUyMGVjb3N5c3RlbXxlbnwwfHx8fDE3NjE3MTc4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "river ecosystem"
+    },
+    {
+      "id": "bangalore-pub-1",
+      "description": "A lively pub with a great ambiance in Bangalore.",
+      "imageUrl": "https://images.unsplash.com/photo-1697656359797-fb8d0a803a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaXZlbHklMjBwdWJ8ZW58MHx8fHwxNzYxNzE3ODM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lively pub"
+    }
+  ]
 }
