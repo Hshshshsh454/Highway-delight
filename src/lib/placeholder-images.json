@@ -75,25 +75,25 @@
     {
       "id": "goa-beach-1",
       "description": "Sunny beach in Goa with palm trees.",
-      "imageUrl": "https://images.unsplash.com/photo-1509280951623-4a174069d27b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1590372793661-fe233657512a?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "goa beach"
     },
     {
       "id": "goa-beach-2",
       "description": "Sunset over the Arabian Sea in Goa.",
-      "imageUrl": "https://images.unsplash.com/photo-1542895821-336c523360a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1614082242765-7c9de522438c?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "goa sunset"
     },
     {
       "id": "jaipur-fort-1",
       "description": "The Amber Fort in Jaipur.",
-      "imageUrl": "https://images.unsplash.com/photo-1599661046223-1169c911005a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1603261769698-b8d63a443586?q=80&w=1931&auto=format&fit=crop",
       "imageHint": "jaipur fort"
     },
     {
       "id": "jaipur-fort-2",
       "description": "Hawa Mahal in Jaipur.",
-      "imageUrl": "https://images.unsplash.com/photo-1524230507669-3ff9421526d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1593126356495-2c35832a87c1?q=80&w=1974&auto=format&fit=crop",
       "imageHint": "hawa mahal"
     },
     {
@@ -123,13 +123,13 @@
     {
       "id": "rishikesh-rafting-1",
       "description": "White water rafting in Rishikesh.",
-      "imageUrl": "https://images.unsplash.com/photo-1605650129286-1c88da45c66e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1603787933933-39634710185e?q=80&w=2071&auto=format&fit=crop",
       "imageHint": "river rafting"
     },
     {
       "id": "rishikesh-rafting-2",
       "description": "Laxman Jhula bridge in Rishikesh.",
-      "imageUrl": "https://images.unsplash.com/photo-1601632367464-90412a02b378?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1599691535899-7333ab620e29?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "rishikesh bridge"
     },
     {
@@ -147,7 +147,7 @@
     {
       "id": "ooty-train-1",
       "description": "Nilgiri Mountain Railway train in Ooty.",
-      "imageUrl": "https://images.unsplash.com/photo-1616431941653-e8bd33264c39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1613437521873-5471c85d7756?q=80&w=1932&auto=format&fit=crop",
       "imageHint": "ooty train"
     },
     {
@@ -171,13 +171,13 @@
     {
       "id": "munnar-tea-1",
       "description": "Tea gardens in Munnar, Kerala.",
-      "imageUrl": "https://images.unsplash.com/photo-1593776089291-7d69b3203494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1616383971942-2b36357f8844?q=80&w=1935&auto=format&fit=crop",
       "imageHint": "munnar tea"
     },
     {
       "id": "munnar-tea-2",
       "description": "Rolling hills of Munnar.",
-      "imageUrl": "https://images.unsplash.com/photo-1576126635293-fcd2d88817d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1605284917951-de11e353de08?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "munnar hills"
     }
   ]
