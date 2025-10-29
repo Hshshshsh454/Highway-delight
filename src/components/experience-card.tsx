@@ -50,7 +50,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           </p>
           <div className="flex justify-between items-center mt-auto pt-4 border-t">
             <p className="text-lg font-bold text-primary">
-              ₹{experience.price.toLocaleString()}
+              ${experience.price.toLocaleString()}
             </p>
             <div className="flex items-center gap-1 text-sm text-muted-foreground">
               <Star className="w-4 h-4 text-accent fill-accent" />
