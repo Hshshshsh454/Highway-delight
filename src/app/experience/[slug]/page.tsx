@@ -25,11 +25,14 @@ export async function generateStaticParams() {
 }
 
 export default function ExperiencePage({ params }: Props) {
-  const experience = experiences.find((exp) => exp.slug === params.slug);
+  const experienceData = experiences.find((exp) => exp.slug === params.slug);
 
-  if (!experience) {
+  if (!experienceData) {
     notFound();
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { categoryIcon, ...experience } = experienceData;
 
   const experienceImages = PlaceHolderImages.filter((img) =>
     experience.imageIds.includes(img.id)
