@@ -158,7 +158,7 @@ export function BookingWidget({ experience }: BookingWidgetProps) {
                    <Minus className="h-3 w-3" />
                  </Button>
                  <span className="font-bold w-6 text-center">{quantity}</span>
-                 <Button variant="outline" size="icon" className="h-6 w-6" onClick={() => setQuantity(q => Math.min(10, q + 1))} disabled={quantity >= 10}>
+                 <Button variant="outline" size="icon" className="h-6 w-6" onClick={() => setQuantity(q => Math.min(maxQuantity, q + 1))} disabled={quantity >= maxQuantity}>
                    <Plus className="h-3 w-3" />
                  </Button>
                </div>
@@ -181,7 +181,7 @@ export function BookingWidget({ experience }: BookingWidgetProps) {
       </CardContent>
       <CardFooter className="p-4">
         <Button size="lg" className="w-full font-bold bg-primary hover:bg-primary/90" onClick={handleBooking}>
-          Confirm
+          Book Now
         </Button>
       </CardFooter>
     </Card>
