@@ -53,7 +53,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
               ${experience.price.toLocaleString()}
             </p>
             <div className="flex items-center gap-1 text-sm text-muted-foreground">
-              <Star className="w-4 h-4 text-accent fill-accent" />
+              <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
               <span className="font-semibold">{experience.rating}</span>
               <span>({experience.reviews})</span>
             </div>
