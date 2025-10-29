@@ -1,6 +1,8 @@
+
 "use client";
 
 import { useState, useMemo, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import type { Experience, TimeSlot, Availability } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -22,6 +24,7 @@ export function BookingWidget({ experience }: BookingWidgetProps) {
   const [selectedTimeSlot, setSelectedTimeSlot] = useState<TimeSlot | null>(null);
   const [quantity, setQuantity] = useState(1);
   const { toast } = useToast();
+  const router = useRouter();
 
   const availableDates = useMemo(() => {
     const today = startOfDay(new Date());
@@ -60,10 +63,15 @@ export function BookingWidget({ experience }: BookingWidgetProps) {
       });
       return;
     }
-    toast({
-      title: 'Booking Confirmed!',
-      description: `Your spot for ${experience.title} on ${format(selectedDate, 'PPP')} at ${selectedTimeSlot.time} is booked for ${quantity} person(s).`,
+    
+    const params = new URLSearchParams({
+      experienceId: experience.id,
+      date: format(selectedDate, 'yyyy-MM-dd'),
+      time: selectedTimeSlot.time,
+      quantity: quantity.toString(),
     });
+
+    router.push(`/checkout?${params.toString()}`);
   };
 
   const maxQuantity = selectedTimeSlot ? selectedTimeSlot.capacity - selectedTimeSlot.booked : 1;

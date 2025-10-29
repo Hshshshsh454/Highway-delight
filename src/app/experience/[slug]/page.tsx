@@ -1,3 +1,4 @@
+
 import { experiences } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -87,7 +88,7 @@ export default function ExperiencePage({ params }: Props) {
         </div>
 
         {/* Right Column: Booking Widget */}
-        <div className="h-fit">
+        <div className="h-fit sticky top-24">
           <BookingWidget experience={experience} />
         </div>
       </div>
