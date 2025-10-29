@@ -71,6 +71,114 @@
       "description": "A lively pub with a great ambiance in Bangalore.",
       "imageUrl": "https://images.unsplash.com/photo-1697656359797-fb8d0a803a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaXZlbHklMjBwdWJ8ZW58MHx8fHwxNzYxNzE3ODM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lively pub"
+    },
+    {
+      "id": "goa-beach-1",
+      "description": "Sunny beach in Goa with palm trees.",
+      "imageUrl": "https://images.unsplash.com/photo-1509280951623-4a174069d27b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "goa beach"
+    },
+    {
+      "id": "goa-beach-2",
+      "description": "Sunset over the Arabian Sea in Goa.",
+      "imageUrl": "https://images.unsplash.com/photo-1542895821-336c523360a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "goa sunset"
+    },
+    {
+      "id": "jaipur-fort-1",
+      "description": "The Amber Fort in Jaipur.",
+      "imageUrl": "https://images.unsplash.com/photo-1599661046223-1169c911005a?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "jaipur fort"
+    },
+    {
+      "id": "jaipur-fort-2",
+      "description": "Hawa Mahal in Jaipur.",
+      "imageUrl": "https://images.unsplash.com/photo-1524230507669-3ff9421526d1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "hawa mahal"
+    },
+    {
+      "id": "agra-taj-1",
+      "description": "The Taj Mahal at sunrise.",
+      "imageUrl": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "taj mahal"
+    },
+    {
+      "id": "agra-taj-2",
+      "description": "Agra Fort overlooking the Yamuna River.",
+      "imageUrl": "https://images.unsplash.com/photo-1605739899139-4a9c138b01a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "agra fort"
+    },
+    {
+      "id": "mumbai-city-1",
+      "description": "The Gateway of India in Mumbai.",
+      "imageUrl": "https://images.unsplash.com/photo-1595658658481-d53d3f99b825?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "mumbai gateway"
+    },
+    {
+      "id": "mumbai-city-2",
+      "description": "Marine Drive in Mumbai at night.",
+      "imageUrl": "https://images.unsplash.com/photo-1562307525-2a42e5d9540b?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "marine drive"
+    },
+    {
+      "id": "rishikesh-rafting-1",
+      "description": "White water rafting in Rishikesh.",
+      "imageUrl": "https://images.unsplash.com/photo-1605650129286-1c88da45c66e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "river rafting"
+    },
+    {
+      "id": "rishikesh-rafting-2",
+      "description": "Laxman Jhula bridge in Rishikesh.",
+      "imageUrl": "https://images.unsplash.com/photo-1601632367464-90412a02b378?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "rishikesh bridge"
+    },
+    {
+      "id": "shimla-train-1",
+      "description": "The historic toy train in Shimla.",
+      "imageUrl": "https://images.unsplash.com/photo-1623713524275-9c9852b7b844?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "shimla train"
+    },
+    {
+      "id": "shimla-train-2",
+      "description": "The Ridge in Shimla during winter.",
+      "imageUrl": "https://images.unsplash.com/photo-1618778184542-87b87824e803?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "shimla winter"
+    },
+    {
+      "id": "ooty-train-1",
+      "description": "Nilgiri Mountain Railway train in Ooty.",
+      "imageUrl": "https://images.unsplash.com/photo-1616431941653-e8bd33264c39?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "ooty train"
+    },
+    {
+      "id": "ooty-train-2",
+      "description": "Ooty lake and boathouse.",
+      "imageUrl": "https://images.unsplash.com/photo-1623310334331-b9983995f795?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "ooty lake"
+    },
+    {
+      "id": "darjeeling-tea-1",
+      "description": "Tea plantations in Darjeeling.",
+      "imageUrl": "https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "darjeeling tea"
+    },
+    {
+      "id": "darjeeling-tea-2",
+      "description": "View of Kanchenjunga from Darjeeling.",
+      "imageUrl": "https://images.unsplash.com/photo-1626548344118-a87a2593b483?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "kanchenjunga mountain"
+    },
+    {
+      "id": "munnar-tea-1",
+      "description": "Tea gardens in Munnar, Kerala.",
+      "imageUrl": "https://images.unsplash.com/photo-1616383971942-2b36357f8844?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "munnar tea"
+    },
+    {
+      "id": "munnar-tea-2",
+      "description": "Rolling hills of Munnar.",
+      "imageUrl": "https://images.unsplash.com/photo-1605284917951-de11e353de08?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "munnar hills"
     }
   ]
 }
