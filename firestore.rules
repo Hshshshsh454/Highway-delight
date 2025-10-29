@@ -1,0 +1,113 @@
+/**
+ * @fileoverview Firestore Security Rules for the Experience Booking Application.
+ *
+ * Core Philosophy:
+ * This ruleset enforces a user-ownership model for user profiles and bookings,
+ * while allowing public read access to experiences and time slots.
+ *
+ * Data Structure:
+ * - /experiences/{experienceId}: Publicly readable information about experiences.
+ * - /users/{userId}: Private user profiles, accessible only to the owning user.
+ * - /users/{userId}/bookings/{bookingId}: Bookings made by a user, accessible only to that user.
+ * - /experiences/{experienceId}/timeSlots/{timeSlotId}: Publicly readable time slots for each experience.
+ *
+ * Key Security Decisions:
+ * - User profiles are strictly private; only the authenticated user can read or write their own profile.
+ * - Bookings are owned by the user who created them and are stored under the user's profile.
+ * - Experiences and time slots are publicly readable but writes are not authorized.
+ * - Listing of users is not permitted.
+ *
+ * Denormalization for Authorization:
+ * The `userId` field in the `/users/{userId}/bookings/{bookingId}` collection
+ * is used for authorization.  This avoids needing to query the user document
+ * to check ownership.
+ *
+ * Structural Segregation:
+ * User profiles and public experience data are stored in separate collections
+ * to maintain a clear separation of concerns and security postures.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Checks if the request is made by a signed-in user.
+     * @return {boolean} True if the user is signed in, false otherwise.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * @description Checks if the authenticated user ID matches the provided user ID.
+     * @param {string} userId The user ID to compare against the authenticated user's ID.
+     * @return {boolean} True if the user IDs match, false otherwise.
+     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /**
+     * @description Checks if the authenticated user is the owner of an existing document.
+     * @param {string} userId The user ID of the document's owner.
+     * @return {boolean} True if the user is the owner and the document exists.
+     */
+    function isExistingOwner(userId) {
+      return isOwner(userId) && resource != null;
+    }
+    
+    /**
+     * @description Rules for the /experiences collection.
+     * @path /experiences/{experienceId}
+     * @allow (get, list): Any user can read experience data.
+     * @deny (create, update, delete): No user can create, update, or delete experiences.
+     * @principle Public read access with no writes.
+     */
+    match /experiences/{experienceId} {
+      allow get, list: if true;
+      allow create, update, delete: if false;
+    }
+
+    /**
+     * @description Rules for the /users collection.
+     * @path /users/{userId}
+     * @allow (create): A user can create their own profile if the user ID matches the authenticated user ID.
+     * @allow (get, update, delete): A user can read, update, and delete their own profile.
+     * @deny (list): Listing users is not allowed.
+     * @deny (create): A user cannot create a profile with an ID that does not match their auth ID.
+     * @deny (update, delete): A user cannot modify or delete another user's profile.
+     * @principle Enforces document ownership for user profiles.
+     */
+    match /users/{userId} {
+      allow get, update, delete: if isExistingOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow list: if false;
+    }
+
+    /**
+     * @description Rules for the /users/{userId}/bookings collection.
+     * @path /users/{userId}/bookings/{bookingId}
+     * @allow (create): A user can create a booking under their own profile if the userId matches.
+     * @allow (get, list, update, delete): A user can read, list, update, and delete their own bookings.
+     * @deny (create): A user cannot create a booking under another user's profile.
+     * @deny (update, delete): A user cannot modify or delete another user's booking.
+     * @principle Enforces document ownership for bookings within a user's profile.
+     */
+    match /users/{userId}/bookings/{bookingId} {
+      allow get, list, update, delete: if isExistingOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.userId == userId;
+    }
+
+    /**
+     * @description Rules for the /experiences/{experienceId}/timeSlots collection.
+     * @path /experiences/{experienceId}/timeSlots/{timeSlotId}
+     * @allow (get, list): Any user can read time slot data.
+     * @deny (create, update, delete): No user can create, update, or delete time slots.
+     * @principle Public read access for time slots.
+     */
+    match /experiences/{experienceId}/timeSlots/{timeSlotId} {
+      allow get, list: if true;
+      allow create, update, delete: if false;
+    }
+  }
+}

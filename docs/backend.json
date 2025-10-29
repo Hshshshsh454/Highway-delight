@@ -1,0 +1,250 @@
+{
+  "entities": {
+    "Experience": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Experience",
+      "type": "object",
+      "description": "Represents an experience offered to users.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Experience entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the experience."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the experience."
+        },
+        "price": {
+          "type": "number",
+          "description": "Price of the experience."
+        },
+        "location": {
+          "type": "string",
+          "description": "Location where the experience takes place (e.g., Udupi, Bangalore)."
+        },
+        "imageUrls": {
+          "type": "array",
+          "description": "URLs of images showcasing the experience.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "slug": {
+          "type": "string",
+          "description": "A URL-friendly slug for the experience, used in detail view URLs."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "price",
+        "location",
+        "imageUrls",
+        "slug"
+      ]
+    },
+    "Booking": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Booking",
+      "type": "object",
+      "description": "Represents a booking made by a user for an experience.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Booking entity."
+        },
+        "experienceId": {
+          "type": "string",
+          "description": "Reference to the Experience booked. (Relationship: Experience 1:N Booking)"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to the User who made the booking. (Relationship: User 1:N Booking)"
+        },
+        "slotId": {
+          "type": "string",
+          "description": "Reference to the TimeSlot booked. (Relationship: TimeSlot 1:N Booking)"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "Number of slots booked."
+        },
+        "bookingDate": {
+          "type": "string",
+          "description": "Date and time when the booking was made.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "experienceId",
+        "userId",
+        "slotId",
+        "quantity",
+        "bookingDate"
+      ]
+    },
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the application. Note: Authentication details are assumed to be handled externally.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the User entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the user."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the user.",
+          "format": "email"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email"
+      ]
+    },
+    "TimeSlot": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "TimeSlot",
+      "type": "object",
+      "description": "Represents a specific time slot available for booking an experience.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the TimeSlot entity."
+        },
+        "experienceId": {
+          "type": "string",
+          "description": "Reference to the Experience this time slot belongs to. (Relationship: Experience 1:N TimeSlot)"
+        },
+        "startTime": {
+          "type": "string",
+          "description": "Start time of the time slot.",
+          "format": "date-time"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "End time of the time slot.",
+          "format": "date-time"
+        },
+        "capacity": {
+          "type": "number",
+          "description": "Maximum capacity for this time slot."
+        },
+        "available": {
+          "type": "number",
+          "description": "Number of slots still available in this time slot."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date of the time slot",
+          "format": "date"
+        }
+      },
+      "required": [
+        "id",
+        "experienceId",
+        "startTime",
+        "endTime",
+        "capacity",
+        "available",
+        "date"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/experiences/{experienceId}",
+        "definition": {
+          "entityName": "Experience",
+          "schema": {
+            "$ref": "#/backend/entities/Experience"
+          },
+          "description": "Stores experience entities.",
+          "params": [
+            {
+              "name": "experienceId",
+              "description": "The unique identifier for an experience."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profiles. User can only access their own profile.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for a user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/bookings/{bookingId}",
+        "definition": {
+          "entityName": "Booking",
+          "schema": {
+            "$ref": "#/backend/entities/Booking"
+          },
+          "description": "Stores bookings made by a user. Each booking is associated with a specific experience and time slot. Only the user can access their bookings.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user who made the booking."
+            },
+            {
+              "name": "bookingId",
+              "description": "The unique identifier for the booking."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/experiences/{experienceId}/timeSlots/{timeSlotId}",
+        "definition": {
+          "entityName": "TimeSlot",
+          "schema": {
+            "$ref": "#/backend/entities/TimeSlot"
+          },
+          "description": "Stores time slots available for each experience. Accessible to everyone for viewing availability.",
+          "params": [
+            {
+              "name": "experienceId",
+              "description": "The unique identifier for the experience."
+            },
+            {
+              "name": "timeSlotId",
+              "description": "The unique identifier for the time slot."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to ensure authorization independence, clarity, and scalability. It leverages denormalization to avoid complex security rules and supports efficient data retrieval for the application's core features.\n\n**Authorization Independence:**\n\n*   The application uses path-based ownership for users and their bookings. The `bookings` subcollection under each `user` contains booking information and eliminates the need to query parent documents for authorization. No `get()` calls are needed for authorization.\n\n**Structural Segregation:**\n\n*   Experiences, TimeSlots, Users, and Bookings each have their own top-level collections or user-owned subcollections, ensuring a homogeneous security posture within each collection.\n\n**Access Modeling:**\n\n*   Private Data: User profiles are stored under `/users/{userId}`, ensuring only the user can access their data.\n*   User-Owned Data: Bookings are stored under `/users/{userId}/bookings/{bookingId}`, clearly defining the ownership.\n\n**QAPs Support:**\n\n*   List Experiences: Listing experiences is supported by querying the `/experiences` collection. Security rules on this collection can control read access based on the application's requirements.\n*   List Bookings: Listing bookings are supported by querying `/users/{userId}/bookings`. Security rules can ensure that only the user can list their bookings.\n\n**Invariants:**\n\n*   Ownership of bookings is maintained by the path structure `/users/{userId}/bookings/{bookingId}`. Timestamps can be enforced through security rules using `request.time`."
+  }
+}
