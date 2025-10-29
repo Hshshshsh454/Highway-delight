@@ -14,6 +14,16 @@ const locations = [
   'Coorg',
   'Manali',
   'Sunderban',
+  'Goa',
+  'Jaipur',
+  'Agra',
+  'Mumbai',
+  'Delhi',
+  'Rishikesh',
+  'Shimla',
+  'Ooty',
+  'Darjeeling',
+  'Munnar',
 ];
 
 export default function Home() {
