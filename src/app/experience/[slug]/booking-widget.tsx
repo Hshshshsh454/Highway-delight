@@ -91,7 +91,7 @@ export function BookingWidget({ experience }: BookingWidgetProps) {
         <div className="flex justify-between items-baseline">
             <span className="text-sm text-muted-foreground">Starts at</span>
             <span className="text-xl font-bold text-foreground">
-                ₹{experience.price.toLocaleString()}
+                Rupees {experience.price.toLocaleString()}
             </span>
         </div>
       </CardHeader>
@@ -165,16 +165,16 @@ export function BookingWidget({ experience }: BookingWidgetProps) {
              </div>
              <div className="flex justify-between text-muted-foreground">
                <span>Subtotal</span>
-               <span>₹{subtotal.toLocaleString()}</span>
+               <span>Rupees {subtotal.toLocaleString()}</span>
              </div>
              <div className="flex justify-between text-muted-foreground">
                <span>Taxes</span>
-               <span>₹{taxes.toFixed(0)}</span>
+               <span>Rupees {taxes.toFixed(0)}</span>
              </div>
              <Separator className="my-2"/>
              <div className="flex justify-between font-bold text-lg">
                <span>Total</span>
-               <span>₹{total.toFixed(0)}</span>
+               <span>Rupees {total.toFixed(0)}</span>
              </div>
           </div>
 

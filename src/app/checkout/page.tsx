@@ -221,17 +221,17 @@ function CheckoutPage() {
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Subtotal</span>
                     <span className="font-medium">
-                      ₹{subtotal.toLocaleString()}
+                      Rupees {subtotal.toLocaleString()}
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Taxes</span>
-                    <span className="font-medium">₹{taxes.toFixed(0)}</span>
+                    <span className="font-medium">Rupees {taxes.toFixed(0)}</span>
                   </div>
                   <Separator className="my-2" />
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
-                    <span>₹{total.toFixed(0)}</span>
+                    <span>Rupees {total.toFixed(0)}</span>
                   </div>
                 </div>
 
